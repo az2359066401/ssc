@@ -1,0 +1,6 @@
+<configuration>
+    <property>
+        <name>hive.metastore.uris</name>
+        <value>thrift://hdp-node-01:9083</value>
+    </property>
+</configuration>
