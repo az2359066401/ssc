@@ -128,16 +128,6 @@ public class LocalSumStormAckerTopology {
                 this.collector.fail(input);  // 确认消息处理失败
             }
 
-
-
-//            try {
-//                // TODO... 你的业务逻辑
-//                this.collector.ack(input);
-//            } catch (Exception e) {
-//                this.collector.fail(input);
-//            }
-
-
             System.out.println("Bolt: sum = [" + sum + "]");
         }
 
@@ -160,7 +150,7 @@ public class LocalSumStormAckerTopology {
 
         // 创建一个本地Storm集群：本地模式运行，不需要搭建Storm集群
         LocalCluster cluster = new LocalCluster();
-        cluster.submitTopology("LocalSumStormAckerTopology", new Config(),
+        cluster.submitTopology("LocalWordCountRedisStormTopology", new Config(),
                 builder.createTopology());
 
 
